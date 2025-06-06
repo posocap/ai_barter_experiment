@@ -1,14 +1,15 @@
 # AI Utility Maximization via Barter in a Two-good Exchange Economy
 
 ```
-######################################
-# AI Utility Maximization via Barter #
-#    Under Bounded Rationality       #
-# https://posocap.com                #
-# https://github.com/posocap         #
-# First version: Fall 2023           #
-# Last updated: June 2025            #
-######################################
+##############################################
+# AI Utility Maximization via Barter         #
+#    Under Bounded Rationality               #
+# https://posocap.com                        #
+# https://github.com/posocap                 #
+# https://substack.com/@posocap/p-165322887  #
+# First version: Fall 2023                   #
+# Last updated: June 2025                    #
+##############################################
 ```
 
 ## Overview
