@@ -13,7 +13,7 @@
 num_agents <- 2
 
 # How many turns to allow before giving up?
-max_turns <- 10
+max_turns <- 20
 
 # AI model
 ai_model <- "o3-mini" #"o4-mini-2025-04-16" "gpt-4o-mini"
@@ -204,3 +204,5 @@ log_messages %>%
   filter(turn == max(log_messages$turn)) %>%
   summarise(total_X = sum(X), total_Y = sum(Y)) %>%
   print()
+
+print("If the two sets of numbers above match then rationality held up well enough to have a valid result. To see how well of a result, consult the graph and check against a plain multi-objective optimization.")
