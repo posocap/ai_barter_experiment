@@ -35,4 +35,25 @@ Run with R or in an IDE (e.g., RStudio):
     source("main_script.R") 
 ```
 
-![Utility Plot](utility_plot_20250605_202259_o3-mini.png)
+![Utility Plot](utility_plot_20250605_201546_o3-mini.png)
+
+## Technical Features
+
+This project makes use of a custom API response schema, utilizing OpenAI's semi-new "structured output" functionality.
+
+Supports all current OpenAI conversation models. Tested with:
+
+  - gpt-4o
+  - gpt-4o-mini
+  - o3-mini
+  - o4-mini
+
+## Economic Features
+
+  - Cobb-Douglas utility, without the constrain that parameters sum to unity.
+  - Bounded rationality courtesy of ChatGPT's poor math and information management capabilities (which are much better with the reasoning models).
+  - Flexible information sharing.
+  
+## Authorship
+
+Created by PosoCap.com. The original program was created without the aid of AI, mostly because it's not great with R, but the update applying the new structure output feature of OpenAI's API used generative AI to help verify that the errors in math were ChatGPT's, not ours, as well as to quickly scaffold the plot's code. Feel free to fork the code. Please link to this repo and https://posocap.com.
