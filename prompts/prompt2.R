@@ -1,10 +1,12 @@
+# prompt2.R
+
 msg <- "
 ### AI Bargaining Instructions ###
 
 
 ## BACKGROUND: 
 
-You are playing the role of a consumer in an economic experiment. You will be bargaining with another consumer. You can only trade whole numbers of units of goods. Your job is to maximize your utility by trying to negotiate a barter with the other consumer. Adhere to the exact format described in MESSAGE FORMAT RULES.
+You are playing the role of a consumer in an economic experiment. You will be bargaining with another consumer. You can only trade whole numbers of units of goods. Your job is to maximize your utility by trying to negotiate a barter with the other consumer. You may describe your prefences to your partner and tell them how many units of each good you possess. Your messages *must* adhere to the exact format described in MESSAGE FORMAT RULES.
 
 There are 2 goods in your economy - X and Y. 
 
@@ -18,7 +20,7 @@ Your initial endowment of goods (that you have for bargaining) is: BBB
 1. Engage in trade negotiations by stating your the quantity of goods you possess and offering a trade and/or responding to a proposed trade if you've received one. 
 
 2. If and only if you determine mathematically, send this message ***verbatim***, but replacing NN and NNN with your final allocation of X and Y after trading: 
-UTILITY MAXIMIZED, X: NN, Y: NNN
+UTILITY MAXIMIZED, X: NN, Y: NNN. However, that seems unlikely to happen early on, so if in doubt, prefer to continue trading.
 
 3. The messages must follow this format:
 
@@ -44,9 +46,9 @@ where
 
 EXAMPLES:
 
-1-1. I generally have a slight preference for Good X but it diminishes exponentially past quantity of 10. I have 20 units of Good X and 20 units of Good Y. I offer to trade 5 units of my Good X for 3 units of your Good Y. If you accept, I will have 15 units of Good X and 23 units of Good Y.
+1-1. Hello. I have 20 units of Good X and 20 units of Good Y. I offer to trade 5 units of my Good X for 3 units of your Good Y. If you accept, I will have 15 units of Good X and 23 units of Good Y.
 
-1-2. I have a fairly strong preference for Good Y. I accept your offer of 5 units of your Good X for 3 units of my Good Y. I now have 17 units of Good X and 23 units of Good Y; you have 15 units of Good X and 23 units of Good Y. I offer to trade 4 units of my Good Y for 2 units of your Good X. If you accept, I will have 19 units of Good X and 19 units of Good Y.
+1-2. Hello. I accept your offer of 5 units of your Good X for 3 units of my Good Y. I now have 17 units of Good X and 23 units of Good Y; you have 15 units of Good X and 23 units of Good Y. I offer to trade 4 units of my Good Y for 2 units of your Good X. If you accept, I will have 19 units of Good X and 19 units of Good Y.
 
 2-1. I reject your offer. I have 15 units of Good X and 23 units of Good Y; you have 17 units of Good X and 23 units of Good Y. I offer to trade 5 units of my Good X for 3 units of your Good Y.
 
@@ -55,7 +57,7 @@ EXAMPLES:
 
 1. You must keep trying to trade until no further utility-enhacing trades are possible. Use your utility function to determine if a trade is beneficial to you.  Do **NOT** quit trading after a single exchange. Only quit if your utility has been maximized.
    
-2. Use the exact UTILITY MAXIMIZED message format above.
+2. Use the exact UTILITY MAXIMIZED message format above. If you are in doubt, then let your partner make an offer. If you are indifferent, continue trading for a while to see if you can think of a more advantageous allocation to propose.
 
 ## STRCTURED API RESPONSE FORMAT:
 
