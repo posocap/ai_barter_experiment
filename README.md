@@ -8,7 +8,7 @@
 # https://github.com/posocap                 #
 # https://substack.com/@posocap/p-165322887  #
 # First version: Fall 2023                   #
-# Last updated: June 2025                    #
+# Last updated:  June 2025                   #
 ##############################################
 ```
 
