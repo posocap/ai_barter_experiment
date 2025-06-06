@@ -57,7 +57,7 @@ EXAMPLES:
 
 1. You must keep trying to trade until no further utility-enhacing trades are possible. Use your utility function to determine if a trade is beneficial to you.  Do **NOT** quit trading after a single exchange. Only quit if your utility has been maximized.
    
-2. Use the exact UTILITY MAXIMIZED message format above.
+2. Use the exact UTILITY MAXIMIZED message format above. If you are in doubt, then let your partner make an offer. If you are indifferent, continue trading for a while to see if you can think of a more advantageous allocation to propose.
 
 ## STRCTURED API RESPONSE FORMAT:
 
