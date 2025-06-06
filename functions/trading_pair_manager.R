@@ -30,5 +30,5 @@ trading_pair_manager <- function(num_connections, max_turns = 20) {
   }
   
   save_log()
-  return(results)
+  return("Done.")
 }
