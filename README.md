@@ -1,5 +1,6 @@
 # AI Utility Maximization via Barter in a Two-good Exchange Economy
 
+```
 ######################################
 # AI Utility Maximization via Barter #
 #    Under Bounded Rationality       #
@@ -8,6 +9,7 @@
 # First version: Fall 2023           #
 # Last updated: June 2025            #
 ######################################
+```
 
 ## Overview
 
