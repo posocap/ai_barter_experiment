@@ -3,7 +3,7 @@
 ```
 ##############################################
 # AI Utility Maximization via Barter         #
-#    Under Bounded Rationality               #
+#    Under Bounded Rationality Part I        #
 # https://posocap.com                        #
 # https://github.com/posocap                 #
 # https://substack.com/@posocap/p-165322887  #
