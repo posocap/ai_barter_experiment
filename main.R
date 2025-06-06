@@ -11,10 +11,10 @@
 
 # Params ------------------------------------------------------------------
 # How many agents?
-num_agents <- 2
+num_agents <- 4
 
 # How many turns to allow before giving up?
-max_turns <- 20
+max_turns <- 7
 
 # AI model
 ai_model <- "o3-mini" #"o4-mini-2025-04-16" "gpt-4o-mini"
@@ -27,9 +27,9 @@ plan(multisession)
 
 set.seed(42)
 
-MY_KEY <- Sys.getenv("OPENAI_API_KEY")
+MY_KEY <- readLines("/openai_api_key.txt")
 
-# Information Sharing -----------------------------------------------------
+# Informat# Informat# Information Sharing -----------------------------------------------------
 # If set to True (T) then partners may discuss their preferences, otherwise
 #  only offer trades without sharing information.
 discuss_preferences <- ifelse(T, "prompts/prompt.R", "prompts/prompt2.R") 

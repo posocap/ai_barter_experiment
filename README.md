@@ -35,7 +35,7 @@ Run with R or in an IDE (e.g., RStudio):
     source("main_script.R") 
 ```
 
-![Utility Plot](utility_plot_20250605_201546_o3-mini.png)
+![Utility Plot](plot.png)
 
 ## Technical Features
 

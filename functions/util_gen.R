@@ -1,9 +1,12 @@
 # File: util_gen.R
-utility_fn_generator <- function(text = F) {
-  # (Semi-) random parameters constrained to valid range for C-D
+utility_fn_generator <- function(text = F, constrain = T) {
+    # (Semi-) random parameters constrained to valid range for C-D
   paramFn <- function() max(min(abs(rnorm(1, mean = 0.1, sd = 0.1)), 1), 0)
   a_value <- paramFn()
   b_value <- paramFn()
+  ifelse(constrain, # Optional constraint, results in Constant Elasticity of Substitution (CES)
+         a_value <- 1 - b_value,
+         a_value <- a_value)
   
   expr <- expression((log(x) * a) + (log(y) * b))
   

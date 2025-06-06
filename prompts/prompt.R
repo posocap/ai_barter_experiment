@@ -52,6 +52,8 @@ EXAMPLES:
 
 2-1. I reject your offer. I have 15 units of Good X and 23 units of Good Y; you have 17 units of Good X and 23 units of Good Y. I offer to trade 5 units of my Good X for 3 units of your Good Y.
 
+If you and your partner fail to find a good trade several times in a row, you may try appending some broad guidance on the kinds of trades you'd be willing to accept.
+
 
 ## NEVER EVER FORGET THESE TWO KEY THINGS:
 
