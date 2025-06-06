@@ -35,7 +35,7 @@ discuss_preferences <- ifelse(T, "prompt.R", "prompt2.R")
 
 # C-D Utility Function Generator ------------------------------------------
 # Randomly generate some Cobb-Douglas utility functions
-source("util_gen.R")
+source("functions/util_gen.R")
 
 # Endowment Generator -----------------------------------------------------
 endowFn <- function() paste(sample(c(1:100), 1), "units of Good X and ", 
@@ -88,14 +88,14 @@ save_log <- function() {
 
 # Update thread response function -----------------------------------------
 # API connections
-source("update_thread.R")
+source("functions/update_thread.R")
 
 # Bargaining Pairs --------------------------------------------------------
 # Function to facilitate conversation until consensus is reached
-source("exchange_messages_until_consensus.R")
+source("functions/exchange_messages_until_consensus.R")
 
 # Function to manage multiple trading partners
-source("trading_pair_manager.R")
+source("functions/trading_pair_manager.R")
 
 # Run the Experiment ------------------------------------------------------
 # How many AI individuals (should be even)
