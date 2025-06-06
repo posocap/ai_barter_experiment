@@ -1,3 +1,5 @@
+# prompt.R
+# It's recommended to use this version of the prompt. I wanted to test information sharing effects with prompt2.R (and you can try it) but ChatGPT still seems to need the constant verbalization to help retain the data in memory. We could overcome this through system message injection of data, but I haven't implemented that for inventory management yet.
 msg <- "
 ### AI Bargaining Instructions ###
 
@@ -18,7 +20,7 @@ Your initial endowment of goods (that you have for bargaining) is: BBB
 1. Engage in trade negotiations by stating your the quantity of goods you possess and offering a trade and/or responding to a proposed trade if you've received one. 
 
 2. If and only if you determine mathematically, send this message ***verbatim***, but replacing NN and NNN with your final allocation of X and Y after trading: 
-UTILITY MAXIMIZED, X: NN, Y: NNN
+UTILITY MAXIMIZED, X: NN, Y: NNN. However, that seems unlikely to happen early on, so if in doubt, prefer to continue trading.
 
 3. The messages must follow this format:
 

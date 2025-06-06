@@ -1,3 +1,4 @@
+# File: exchange_messages_until_consensus.R
 exchange_messages_until_consensus <- function(conn1, conn2, initial_message, max_turns = 10) {
   turn <- 1
   conn1 <- update_thread_response(conn1, initial_message, turn, 
