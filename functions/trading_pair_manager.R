@@ -1,3 +1,4 @@
+# File: trading_pair_manager.R
 trading_pair_manager <- function(num_connections, max_turns = 20) {
   connections <- create_openai_connections(num_connections)
   results     <- data.frame(pair_id = integer(), consensus = character(), stringsAsFactors = FALSE)

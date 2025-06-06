@@ -56,4 +56,4 @@ Supports all current OpenAI conversation models. Tested with:
   
 ## Authorship
 
-Created by PosoCap.com. The original program was created without the aid of AI, mostly because it's not great with R, but the update applying the new structure output feature of OpenAI's API used generative AI to help verify that the errors in math were ChatGPT's, not ours, as well as to quickly scaffold the plot's code. Feel free to fork the code. Please link to this repo and https://posocap.com.
+Created by PosoCap.com. The original program was created without the aid of AI, mostly because it's not great with R, but the update applying the new structured output feature of OpenAI's API used generative AI to help verify that the errors in math were ChatGPT's, not ours, as well as to quickly scaffold the plot's code. GitHub Copilot was used to verified that there were no bugs in the logic and found none. Feel free to fork the code. Please link to this repo and https://posocap.com.

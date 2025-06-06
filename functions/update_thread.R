@@ -1,4 +1,4 @@
-# I've updated this code to use the newer "structured output" feature of the API
+# File: update_thread.R
 # I've updated this code to use the newer "structured output" feature of the API
 
 # Define the barter schema for structured output

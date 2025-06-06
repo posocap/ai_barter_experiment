@@ -103,10 +103,10 @@ total_num_nodes <- num_agents
 even            <- function(x) x %% 2 == 0
 
 # Main execution
-test_results    <- trading_pair_manager(ifelse(even(total_num_nodes), 
-                                               total_num_nodes, 
-                                               total_num_nodes + 1), 
-                                        max_turns = max_turns)
+trading_pair_manager(ifelse(even(total_num_nodes), 
+                             total_num_nodes, 
+                             total_num_nodes + 1), 
+                      max_turns = max_turns)
 
 # Append endowments to log
 for(ai in unique(log_messages$sender)){
