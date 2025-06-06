@@ -13,7 +13,7 @@
 num_agents <- 2
 
 # How many turns to allow before giving up?
-max_turns <- 5
+max_turns <- 10
 
 # AI model
 ai_model <- "o3-mini" #"o4-mini-2025-04-16" "gpt-4o-mini"
@@ -31,7 +31,7 @@ MY_KEY <- Sys.getenv("OPENAI_API_KEY")
 # Information Sharing -----------------------------------------------------
 # If set to True (T) then partners may discuss their preferences, otherwise
 #  only offer trades without sharing information.
-discuss_preferences <- ifelse(T, "prompt.R", "prompt2.R") 
+discuss_preferences <- ifelse(T, "prompts/prompt.R", "prompts/prompt2.R") 
 
 # C-D Utility Function Generator ------------------------------------------
 # Randomly generate some Cobb-Douglas utility functions
@@ -115,7 +115,6 @@ for(ai in unique(log_messages$sender)){
   log_messages$endowment[log_messages$sender == ai] <- endw
 }
 
-print(test_results)
 log_messages$sender <- gsub(log_messages$sender, pattern = "thread_", 
                             replacement = "Agent ")
 
@@ -169,13 +168,20 @@ utility_plot <-
                            y = utility, 
                            color = sender, 
                            group = sender)) +
-    geom_line() +
-    geom_point() +  # Optional: Add points to the lines for better visibility
-    labs(title = "Utility for Each AI Agent Over Negotiation Rounds",
-         x     = "Round Number",
-         y     = "Utility") +
-    theme_minimal() +
-    theme(legend.title = element_blank())
+  # Thicker raw lines
+  geom_line(size = 1.2) +
+  geom_point() +  
+  # Add a smooth loess curve per sender
+  geom_smooth(method = "loess",
+              se     = FALSE,
+              size   = 1,    
+              linetype = "dashed",
+              alpha  = 0.6) +
+  labs(title = "Utility for Each AI Agent over Negotiation Rounds",
+       x     = "Negotiation Round #",
+       y     = "Utility") +
+  theme_minimal() +
+  theme(legend.title = element_blank())
 
 timestamp <- format(Sys.time(), "%Y%m%d_%H%M%S")
 ggsave(filename = paste0("utility_plot_", timestamp, "_", ai_model, ".png"), 
