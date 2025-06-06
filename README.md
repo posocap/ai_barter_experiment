@@ -13,7 +13,6 @@
 
 ## Overview
 
-
 This program creates an arbitrary number of AI agents that negotiate trades with one another to improve their own utility, which refers to their overall well-being (happiness, productivity, etc.). In economic terms, this process is known as "utility maximization." 
 
 The experiment accompanies a [Substack article](https://posocap.com) and serves several purposes. Economists have demonstrated that bartering can lead to more efficient outcomes, which has important theoretical implications. These concepts are discussed in the article and will be explored in greater detail (and with more code) in future installments of this series.
