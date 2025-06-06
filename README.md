@@ -22,7 +22,7 @@ This project is informative as to the current state of AI in terms of practical 
 
 ## How to Run It
 
-Clone this repo or download the .zip using the green button on the top-right of this screen. For example:
+Obtain an API key from https://platform.openai.com and store it in an environment variable called `OPENAI_API_KEY`. Clone this repo or download the .zip using the green button on the top-right of this screen. For example:
 
 ```bash
    git clone https://github.com/posocap/ai_barter_experiment.git
