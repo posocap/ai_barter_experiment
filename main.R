@@ -254,9 +254,9 @@ utility_plot <-
   #            size   = 1,    
   #            linetype = "dashed",
   #            alpha  = 0.6) +
-  labs(title = "Marginal Utility over Negotiation Rounds",
+  labs(title = "Utility over Negotiation Rounds",
        x     = "Negotiation Round #",
-       y     = "Marginal Utility") +
+       y     = "Utility") +
   theme_minimal() +
   theme(legend.title = element_blank())
 plot(utility_plot)
