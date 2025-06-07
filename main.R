@@ -35,12 +35,13 @@ MY_KEY <- readLines("/openai_api_key.txt")
 discuss_preferences <- ifelse(T, "prompts/prompt.R", "prompts/prompt2.R") 
 
 # C-D Utility Function Generator ------------------------------------------
-# Randomly generate some Cobb-Douglas utility functions
+# Randomly generate some Cobb-Douglas utility functions 
+#   Note: Can be constrained with constrain=T
 source("functions/util_gen.R")
 
 # Endowment Generator -----------------------------------------------------
-endowFn <- function() paste(round(abs(rnorm(mean = 50, sd = 30, n = 1))), "units of Good X and ", 
-                            round(abs(rnorm(mean = 50, sd = 30, n = 1))), "units of Good Y")
+endowFn <- function() paste(round(abs(rnorm(mean = 500, sd = 30, n = 1))), "units of Good X and ", 
+                            round(abs(rnorm(mean = 500, sd = 30, n = 1))), "units of Good Y")
 
 # Make a vector of OpenAI instances ---------------------------------------
 source(discuss_preferences)
@@ -187,10 +188,14 @@ ggsave(filename = paste0("utility_plot_", timestamp, "_", ai_model, ".png"),
        plot = utility_plot, 
        width = 10, height = 6, dpi = 300)
 
+plot(utility_plot)
+
 # Data Validation ---------------------------------------------------------
 log_messages[log_messages$turn %in% c(0, max(log_messages$turn)), ] %>%
   select(sender, turn, X, Y) %>%
   print()
+
+plot(utility_plot)
 
 # Total X and Y at Time=0
 log_messages %>%
