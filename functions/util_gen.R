@@ -1,7 +1,7 @@
 # File: util_gen.R
 utility_fn_generator <- function(text = F) {
     # (Semi-) random parameters constrained to valid range for C-D
-  paramFn <- function() abs(rnorm(1, mean = 50, sd = 10))
+  paramFn <- function() abs(rnorm(1, mean = 25, sd = 5))
   a_value <- paramFn()
   b_value <- paramFn()
 

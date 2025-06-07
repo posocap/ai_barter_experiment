@@ -39,8 +39,8 @@ discuss_preferences <- ifelse(T, "prompts/prompt.R", "prompts/prompt2.R")
 source("functions/util_gen.R")
 
 # Endowment Generator -----------------------------------------------------
-endowFn <- function() paste(round(abs(rnorm(mean = 500, sd = 250, n = 1))), "units of Good X and ", 
-                            round(abs(rnorm(mean = 500, sd = 250, n = 1))), "units of Good Y")
+endowFn <- function() paste(round(abs(rnorm(mean = 50, sd = 25, n = 1))), "units of Good X and ", 
+                            round(abs(rnorm(mean = 50, sd = 25, n = 1))), "units of Good Y")
 
 # Make a vector of OpenAI instances ---------------------------------------
 source(discuss_preferences)
