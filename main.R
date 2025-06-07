@@ -158,8 +158,7 @@ for (i in 1:nrow(log_messages)) {
 # Check the updated log_messages data frame
 log_messages$endowment <- NULL
 log_messages <- log_messages[order(log_messages$sender, log_messages$turn),]
-view(log_messages)
-
+View(log_messages)
 
 # Utility Plot ------------------------------------------------------------
 # Create a line plot of utility for each sender over turns
