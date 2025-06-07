@@ -1,5 +1,5 @@
 # File: util_gen.R
-utility_fn_generator <- function(text = F, constrain = T) {
+utility_fn_generator <- function(text = F, constrain = F) {
     # (Semi-) random parameters constrained to valid range for C-D
   paramFn <- function() max(min(abs(rnorm(1, mean = 0.1, sd = 0.1)), 1), 0)
   a_value <- paramFn()

@@ -35,7 +35,7 @@ update_thread_response <- function(connection, new_message, turn, model,
   # Append the new user message to the conversation history
   connection$messages <- append(connection$messages, list(list(role = "user", 
                                                                content = new_message)))
-  
+  print(connection$messages)
   # Logging the user message
   #log_message(sender = connection$id, goods_held = connection$goods_held, turn = turn, 
   #            message = new_message, utilityfn = utility_fn)

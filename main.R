@@ -11,13 +11,12 @@
 
 # Params ------------------------------------------------------------------
 # How many agents?
-num_agents <- 4
+num_agents <- 2
 
 # How many turns to allow before giving up?
-max_turns <- 7
+max_turns <- 5
 
-# AI model
-ai_model <- "o3-mini" #"o4-mini-2025-04-16" "gpt-4o-mini"
+ai_model <- "o3-mini"#"o4-mini-2025-04-16" #"gpt-4.1" #"o3-mini" #"o4-mini-2025-04-16" "gpt-4o-mini"
 
 # Libraries and Options ---------------------------------------------------
 if (!require(pacman)) { install.packages("pacman"); library(pacman) }
@@ -29,9 +28,10 @@ set.seed(42)
 
 MY_KEY <- readLines("/openai_api_key.txt")
 
-# Informat# Informat# Information Sharing -----------------------------------------------------
-# If set to True (T) then partners may discuss their preferences, otherwise
-#  only offer trades without sharing information.
+# Information Sharing -----------------------------------------------------
+# If set to True (T) then partners may discuss their preferences freely, 
+# otherwise not 
+#  only offer trades without sharing information
 discuss_preferences <- ifelse(T, "prompts/prompt.R", "prompts/prompt2.R") 
 
 # C-D Utility Function Generator ------------------------------------------
@@ -39,8 +39,8 @@ discuss_preferences <- ifelse(T, "prompts/prompt.R", "prompts/prompt2.R")
 source("functions/util_gen.R")
 
 # Endowment Generator -----------------------------------------------------
-endowFn <- function() paste(sample(c(1:100), 1), "units of Good X and ", 
-                            sample(c(1:100), 1), "units of Good Y")
+endowFn <- function() paste(round(abs(rnorm(mean = 50, sd = 30, n = 1))), "units of Good X and ", 
+                            round(abs(rnorm(mean = 50, sd = 30, n = 1))), "units of Good Y")
 
 # Make a vector of OpenAI instances ---------------------------------------
 source(discuss_preferences)
@@ -93,7 +93,7 @@ source("functions/update_thread.R")
 
 # Bargaining Pairs --------------------------------------------------------
 # Function to facilitate conversation until consensus is reached
-source("functions/exchange_messages_until_consensus.R")
+source("functions/exchange_messages.R")
 
 # Function to manage multiple trading partners
 source("functions/trading_pair_manager.R")
@@ -168,7 +168,7 @@ utility_plot <-
                            color = sender, 
                            group = sender)) +
   # Thicker raw lines
-  geom_line(size = 1.2) +
+  geom_line(linewidth = 1.2) +
   geom_point() +  
   # Add a smooth loess curve per sender
   geom_smooth(method = "loess",

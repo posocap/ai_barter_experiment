@@ -12,10 +12,10 @@ trading_pair_manager <- function(num_connections, max_turns = 20) {
     conn1 <- connections[[2 * i - 1]]
     conn2 <- connections[[2 * i]]
     
-    result <- exchange_messages_until_consensus(conn1, 
-                                                conn2, 
-                                                msg,#"Read the original system message and begin trading.", 
-                                                max_turns  = max_turns)
+    result <- exchange_messages(conn1, 
+                                conn2, 
+                                msg,#"Read the original system message and begin trading.", # Now using msg just to see if it helps
+                                max_turns  = max_turns)
     
     results <- results %>% 
       add_row(pair_id = i, consensus = result$consensus)
