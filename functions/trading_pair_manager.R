@@ -1,5 +1,5 @@
 # File: trading_pair_manager.R
-trading_pair_manager <- function(num_connections, max_turns = 20) {
+trading_pair_manager <- function(num_connections = 2, max_turns = 20) {
   connections <- create_openai_connections(num_connections)
   results     <- data.frame(pair_id = integer(), consensus = character(), stringsAsFactors = FALSE)
   
@@ -11,10 +11,10 @@ trading_pair_manager <- function(num_connections, max_turns = 20) {
   for (i in seq_len(num_pairs)) {
     conn1 <- connections[[2 * i - 1]]
     conn2 <- connections[[2 * i]]
-    
+
     result <- exchange_messages(conn1, 
                                 conn2, 
-                                msg,#"Read the original system message and begin trading.", # Now using msg just to see if it helps
+                                "Read the original system message and begin trading.",
                                 max_turns  = max_turns)
     
     results <- results %>% 

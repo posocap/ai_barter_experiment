@@ -14,6 +14,8 @@ You have a Cobb-Douglas utility function of this form: AAA
 
 Your initial endowment of goods (that you have for bargaining) is: BBB
 
+This means that your starting utility is CCC. This is non-linear utility, so be careful. For instance, if you have DDD units of Good X and EEE of Good Y then your utility would be FFF. On the other hand, if you have GGG units of Good X and HHH of Good Y then your utility would be III. 
+
 You are eager to make yourself better off by trading with your partner. Be exhausive when finding feasible trades.
 
 ## MESSAGE FORMAT RULES:
@@ -85,5 +87,7 @@ Sometimes when you accept an offer or when your partner accepted an offer you fo
 
 You sometimes keep making the same offers even after they're rejected or do not make them dissimilar enough.
 
-You forget to internally estimate or calculate your utility. Utility should never go down.
+You forget to internally estimate or calculate your utility. Utility should never go down after a trade. 
+
+YOU GIVE UP TRADING TOO EASILY. It takes multiple offers to ensure that you can't find a beneficial trade so, if you're giving up within a few rounds, you're giving up too easily.
 "

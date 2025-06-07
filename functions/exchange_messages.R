@@ -2,9 +2,11 @@
 exchange_messages <- function(conn1, conn2, initial_message, max_turns = 10) {
   turn <- 1
   conn1 <- update_thread_response(conn1, initial_message, turn, 
-                                  utility_fn = conn1$utility_fn, model = ai_model)
+                                  utility_fn = conn1$utility_fn, 
+                                  model      = ai_model)
   conn2 <- update_thread_response(conn2, conn1$messages[[3]]$content, turn, 
-                                  utility_fn = conn2$utility_fn, model = ai_model)
+                                  utility_fn = conn2$utility_fn, 
+                                  model      = ai_model)
   
   for (i in seq_len(max_turns)) {
     cat("Turn", i, "...\n")
