@@ -120,7 +120,6 @@ log_messages$sender <- gsub(log_messages$sender, pattern = "thread_",
                             replacement = "Agent ")
 
 timestamp <- format(Sys.time(), "%Y%m%d_%H%M%S")
-saveRDS(test_results, paste0("test_results_", timestamp, "_", ai_model, ".rds"))
 saveRDS(log_messages, paste0("log_messages_information_sharing_", 
                              timestamp, "_", ai_model, ".rds"))
 
